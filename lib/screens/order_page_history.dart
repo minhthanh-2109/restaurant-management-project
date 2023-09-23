@@ -23,6 +23,7 @@ class _OrderHistoryPageState extends State<OrderHistoryPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 219, 219, 215),
       appBar: AppBar(
         title: const Text('Lịch sử đơn hàng'),
         actions: [

@@ -38,7 +38,7 @@ class _ManageFoodsPageState extends State<ManageFoodsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 219, 219, 215),
+      backgroundColor: const Color.fromARGB(255, 219, 219, 215),
       appBar: AppBar(
         title: const Text('Quản lí món ăn'),
       ),

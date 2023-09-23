@@ -28,6 +28,7 @@ class _OrdersCompletedPageState extends State<OrdersCompletedPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 219, 219, 215),
       body: Column(
         children: [
           Padding(

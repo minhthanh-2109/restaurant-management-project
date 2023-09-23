@@ -1,22 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:restaurant_management_app/screens/login_page.dart';
 
-var kColorScheme = const ColorScheme(
-  // Adjust the green component here
-  primary: Color.fromARGB(255, 5, 137, 5), // Adjust the green component here
-  primaryContainer: Color.fromARGB(255, 3, 106, 3),
-  secondary: Color(0xFF00A0E1), // Your secondary variant color
-  surface: Colors.white,
-  background: Colors.white,
-  error: Colors.red,
-  onPrimary: Colors.black,
-  onSecondary: Colors.white,
-  onSurface: Colors.black,
-  onBackground: Colors.black,
-  onError: Colors.white,
-  brightness: Brightness.light,
-);
-
 void main() => runApp(const RestaurantFoodApp());
 
 class RestaurantFoodApp extends StatelessWidget {

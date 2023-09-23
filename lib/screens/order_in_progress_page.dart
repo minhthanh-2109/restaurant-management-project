@@ -19,19 +19,22 @@ class OrdersInProgressPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder<List<dynamic>>(
-      future: fetchFoods(),
-      builder: (context, snapshot) {
-        if (snapshot.connectionState == ConnectionState.done) {
-          if (snapshot.hasError) {
-            return Center(child: Text('Error: ${snapshot.error}'));
+    return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 219, 219, 215),
+      body: FutureBuilder<List<dynamic>>(
+        future: fetchFoods(),
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.done) {
+            if (snapshot.hasError) {
+              return Center(child: Text('Error: ${snapshot.error}'));
+            }
+            final foods = snapshot.data;
+            return FoodInProgressListView(foodList: foods!);
+          } else {
+            return const Center(child: CircularProgressIndicator());
           }
-          final foods = snapshot.data;
-          return FoodInProgressListView(foodList: foods!);
-        } else {
-          return const Center(child: CircularProgressIndicator());
-        }
-      },
+        },
+      ),
     );
   }
 }
