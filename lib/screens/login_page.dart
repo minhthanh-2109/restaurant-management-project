@@ -106,12 +106,15 @@ class _LoginPageState extends State<LoginPage> {
                                 const Row(
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   children: [
-                                    Text(
-                                      "Vui Lòng điền thông tin đăng nhập",
-                                      style: TextStyle(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w500,
-                                        color: Color(0xFF0B191E),
+                                    Flexible(
+                                      child: Text(
+                                        "Vui Lòng điền thông tin đăng nhập",
+                                        style: TextStyle(
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.w500,
+                                          color: Color(0xFF0B191E),
+                                        ),
+                                        softWrap: true,
                                       ),
                                     ),
                                   ],

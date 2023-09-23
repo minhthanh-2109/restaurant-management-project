@@ -16,6 +16,7 @@ class ManageFoodItem extends StatelessWidget {
           padding: const EdgeInsets.all(10),
           margin: const EdgeInsets.symmetric(vertical: 5),
           height: 130,
+          width: double.infinity,
           child: Row(
             children: [
               Row(
@@ -32,18 +33,26 @@ class ManageFoodItem extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 8),
                     child: Column(
-                      mainAxisSize: MainAxisSize.max,
+                      mainAxisSize: MainAxisSize.min,
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
-                          food['name'],
-                          style: Theme.of(context).textTheme.titleLarge,
+                        SizedBox(
+                          width: 140,
+                          child: Text(
+                            // 'fgsdjghhjjfdfgdghfhgdvaffvaesdvafva',
+                            food['name'],
+                            style: Theme.of(context).textTheme.titleLarge,
+                            softWrap: true,
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                          ),
                         ),
                         const SizedBox(
                           height: 12,
                         ),
-                        Text('${food['price']} VND'),
+                        Text('${food['price']} VND',
+                            style: Theme.of(context).textTheme.bodyMedium),
                       ],
                     ),
                   ),
